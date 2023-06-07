@@ -25,14 +25,15 @@ store = Store('Code Platoon Video')
 
 print(store.name)
 #Interface('Code Platoon Video').run()
-
-customer_info = {
-    "customer_id" : 6,
-    "first_name" : "Jeff",
-    "last_name" : "Davis", 
-    "current_video_rentals" : "The Princess Bride"
-    }
+for customer_info in store.customers:
+    print(customer_info)
+# customer_info = {
+#     "customer_id" : 6,
+#     "first_name" : "Jeff",
+#     "last_name" : "Davis", 
+#     "current_video_rentals" : "The Princess Bride"
+#     }
     
-customer = Customer(**customer_info)
+# customer = Customer(**customer_info)
 
-print(customer.last_name)
+# print(customer.last_name)
