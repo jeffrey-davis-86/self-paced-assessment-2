@@ -27,6 +27,10 @@ print(store.name)
 #Interface('Code Platoon Video').run()
 for customer_info in store.customers:
     print(customer_info)
+
+print("=======================")
+for inventory_info in store.inventory:
+    print(inventory_info)
 # customer_info = {
 #     "customer_id" : 6,
 #     "first_name" : "Jeff",

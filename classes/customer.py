@@ -7,6 +7,7 @@ class Customer:
         self.first_name = first_name
         self.last_name = last_name
         self.current_video_rentals = current_video_rentals
+        
     def __str__(self):
         return f"{self.customer_id}: {self.first_name} {self.last_name}, {self.current_video_rentals}"
     
@@ -19,7 +20,7 @@ class Customer:
         with open(file, mode="r") as csvfile:
             dict_reader = csv.DictReader(csvfile)
             for row in dict_reader:
-                print(row)
+                #print(row)
                 customer = Customer(**row)
                 all_customers.append(customer)
         return all_customers
