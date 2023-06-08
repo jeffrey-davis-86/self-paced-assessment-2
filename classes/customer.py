@@ -9,7 +9,7 @@ class Customer:
         self.current_video_rentals = current_video_rentals
         
     def __str__(self):
-        return f"{self.customer_id}: {self.first_name} {self.last_name}, {self.current_video_rentals}"
+        return f"{self.customer_id}: {self.first_name} {self.last_name}\n-----------------------------\n{self.current_video_rentals}"
     
     # method to read in all of the customers from the csv file
     @classmethod
