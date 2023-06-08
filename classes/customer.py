@@ -11,6 +11,7 @@ class Customer:
     def __str__(self):
         return f"{self.customer_id}: {self.first_name} {self.last_name}, {self.current_video_rentals}"
     
+    # method to read in all of the customers from the csv file
     @classmethod
     def load_all_customers(cls):
         all_customers = []

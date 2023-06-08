@@ -12,6 +12,7 @@ class Inventory:
     def __str__(self):
         return f"{self.video_id}: {self.title}, rated {self.rating}, {self.copies_available} copies available."
     
+    # method to read in all of the videos from the csv file
     @classmethod
     def load_all_inventory(cls):
         all_inventory = []
