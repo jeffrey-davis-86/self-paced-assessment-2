@@ -29,7 +29,9 @@ class Store:
     def add_customer(self, customer_data):
         new_customer = Customer(**customer_data)
         self.customers.append(new_customer)
+        self.write_all_customers()
         
+    def write_all_customers(self):
         my_path = os.path.abspath(os.path.dirname(__file__))
         file = os.path.join(my_path, "../data/customers.csv")
         
@@ -49,3 +51,28 @@ class Store:
                 #print(next_customer_id)
         return next_customer_id
         
+    def rent_video(self, customer_id, video_id):
+        customer = self.find_customer_by_id(customer_id)
+        current_videos = (customer.current_video_rentals).split('/')
+        #print(current_videos)
+        if len(current_videos)>=3:
+            print('Customer can only rent a maximum of 3 videos at once.')
+        else:
+            video = self.find_video_by_id(video_id)
+            if video:
+                current_videos.append(video.title)
+                print(video.title)
+                print(current_videos)
+            else:
+                print(current_videos)
+
+    # Find video name and number of copies
+    def find_video_by_id(self, video_id):
+        for video in self.inventory:
+            if video.video_id == (video_id):
+                if int(video.copies_available) > 0:
+                    print(f"{video.copies_available} copies available")
+                    return video
+                else:
+                    print("No copies of that movie are currently available.")
+        return None

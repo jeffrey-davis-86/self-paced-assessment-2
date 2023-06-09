@@ -44,8 +44,11 @@ while mode != 6:
             
     # Rent video
     if mode == 3:
-        pass
-    
+        customer_id = input('Enter customer ID: ')
+        video_id = input('Enter video ID: ')
+        rent = store.rent_video(customer_id, video_id)
+        #
+        
     # Return video
     if mode == 4:
         pass
