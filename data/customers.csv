@@ -1,11 +1,12 @@
 customer_id,first_name,last_name,current_video_rentals
-1,Jon,Young,Guardians Of The Galaxy/La La Land
+1,Jon,Young,Guardians Of The Galaxy/La La Land/WALL-E
 2,Tom,Prete,Prometheus/Split/Sing
 3,Rod,Levy,The Dark Knight/Guardians Of The Galaxy/Split
-4,Ankur,Shah,The Prestige
-5,Chris,Howell,
-6,Jeff,Davis,
-7,Kim,Possible,
-8,Marco,Polo,
-9,Bob,Minor,
-10,Anne,Hoffman,
+4,Ankur,Shah,The Prestige/Guardians of the Galaxy/Sing
+5,Chris,Howell,Prometheus/La La Land
+6,Jeff,Davis,Guardians of the Galaxy/La La Land/WALL-E
+7,Kim,Possible,Split/Guardians of the Galaxy
+8,Marco,Polo,Sing/Guardians of the Galaxy
+9,Bob,Minor,Split/WALL-E/Prometheus
+10,Anne,Hoffman,Sing/Split
+11,Ron,Burgundy,

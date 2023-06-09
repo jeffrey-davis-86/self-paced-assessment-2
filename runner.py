@@ -38,6 +38,7 @@ while mode != 6:
         customer_id = input('Enter customer ID: ')
         customer = store.find_customer_by_id(customer_id)
         if customer:
+            print("\n")
             print(customer)
         else:
             print("Customer ID does not exist")
@@ -45,13 +46,26 @@ while mode != 6:
     # Rent video
     if mode == 3:
         customer_id = input('Enter customer ID: ')
-        video_id = input('Enter video ID: ')
-        rent = store.rent_video(customer_id, video_id)
-        #
+        customer = store.find_customer_by_id(customer_id)
+        print(f"\nCustomer: {customer.first_name} {customer.last_name}\n")
+        correct_customer = input('Is this correct? <Y/N>')
+        if correct_customer == "Y" or "y":
+            video_id = input('\nEnter video ID: ')
+            rent = store.rent_video(customer_id, video_id)
+        else:
+            pass
         
     # Return video
     if mode == 4:
-        pass
+        customer_id = input('Enter customer ID: ')
+        customer = store.find_customer_by_id(customer_id)
+        print(f"\nCustomer: {customer.first_name} {customer.last_name}\n")
+        correct_customer = input('Is this for sure correct? <Y/N>')
+        if correct_customer == "Y" or "y":
+            video_id = input('\nEnter video ID: ')
+            return_video = store.return_video(customer_id, video_id)
+        else:
+            pass
     
     # Add new customer
     if mode == 5:
